@@ -1,1 +1,79 @@
-IyBSZWN1cgoKUmVjeWNsZWQtY29udGVudCBhdWRpdCBvbiBbR2VuTGF5ZXJdKGh0dHBzOi8vZ2VubGF5ZXIuY29tKS4gRXZlcnkgbG90IGlzIGEgbm9kZSBpbiBhIHN1cHBseS1jaGFpbiBEQUc7IGJlZm9yZSBhbnkgbW9kZWwgcnVucywgdGhlIGNvbnRyYWN0IGNoZWNrcyB0aGF0IGEgbG90J3MgY2xhaW1lZCByZWN5Y2xlZCBtYXNzIG5ldmVyIGV4Y2VlZHMgdGhlIHZlcmlmaWVkIG1hc3Mgb2YgaXRzIHBhcmVudHMsIHRoZW4gYSB0d28tdGllciBMTE0gc2NvcmVzIHRoZSBjbGFpbSB1bmRlciB2YWxpZGF0b3IgY29uc2Vuc3VzIGFuZCB3cml0ZXMgYW4gZWNvLWxhYmVsIG9uLWNoYWluLgoKIyMgSG93IGl0IHdvcmtzCgoxLiBSZWdpc3RlciBhIGxvdDogc3VibWl0IGl0cyBtYXRlcmlhbCwgcmVnaW9uLCBtYXNzLCBjbGFpbWVkIHJlY3ljbGVkIG1hc3MsIGFuZCBwYXJlbnQgbG90IGlkcy4gVGhlIHJlcXVpcmVkIEdFTiBib25kIHNjYWxlcyB3aXRoIGhvdyBtYW55IGxvdHMgYWxyZWFkeSBjcm93ZCB0aGUgc2FtZSAobWF0ZXJpYWwsIHJlZ2lvbikgY2VsbC4KMi4gU3VibWl0IHRoZSB0cmFjZTogdGhlIGNsYWltYW50IGF0dGFjaGVzIHRoZSBjaGFpbi1vZi1jdXN0b2R5IGV2aWRlbmNlIGZvciB0aGUgbG90LgozLiBNYXNzIGJhbGFuY2U6IGEgZGV0ZXJtaW5pc3RpYyBwYXNzIHdhbGtzIG9uZSBzdGVwIHVwIHRoZSBEQUcgYW5kIHJlamVjdHMgYW55IGxvdCB3aG9zZSBjbGFpbWVkIHJlY3ljbGVkIG1hc3MgZXhjZWVkcyBpdHMgcGFyZW50cycgdmVyaWZpZWQgY2FwYWNpdHkuCjQuIEFkanVkaWNhdGU6IGEgVDEgTExNIHJlYWRzIHRoZSB0cmFjZSBwbHVzIGVhY2ggcGFyZW50J3MgdmVyaWZpZWQgaGlzdG9yeSBhbmQgc2NvcmVzIHJlY3ljbGVkIGNvbnRlbnQgMC0xMDA7IGxvdHMgYXQgb3IgYWJvdmUgNSB0b25uZXMgZXNjYWxhdGUgdG8gYSBUMiBkZWVwIGF1ZGl0Lgo1LiBTZXR0bGU6IGEgdmVyaWZpZWQgbG90IGVhcm5zIHRoZSBlY28tbGFiZWwgYW5kIGEgYm9uZCByZWZ1bmQsIGEgZ3JlZW53YXNoIHJ1bGluZyBzbGFzaGVzIHRoZSBib25kLCBhbmQgaWYgYW4gYW5jZXN0b3IgaXMgbGF0ZXIgb3ZlcnR1cm5lZCBldmVyeSBkZXNjZW5kYW50IGlzIGZsYWdnZWQgZm9yIHJlLWF1ZGl0LgoKIyMgQXJjaGl0ZWN0dXJlCgpgYGAKYmFja2VuZC9yZWN5Y2xlZC12ZXJpZnkucHkgICBHZW5MYXllciBJbnRlbGxpZ2VudCBDb250cmFjdCAoUHl0aG9uLCBydW5zIG9uIHRoZSBHZW5WTSkKZnJvbnRlbmQvICAgICAgICAgICAgICAgICAgICBSZWFjdCArIFZpdGUgKyBUeXBlU2NyaXB0IGRhc2hib2FyZCAoZ2VubGF5ZXItanMpCmBgYAoKQSBjbGFpbSBpcyBuZXZlciBqdWRnZWQgaW4gaXNvbGF0aW9uOiB0aGUgZGV0ZXJtaW5pc3RpYyBtYXNzLWJhbGFuY2UgZ2F0ZSBydW5zIGJlZm9yZSB0aGUgTExNLCBzbyB2YWxpZGF0b3IgY29uc2Vuc3VzIGlzIHNwZW50IG9ubHkgb24gbG90cyB0aGF0IGFyZSBhbHJlYWR5IGFyaXRobWV0aWNhbGx5IHBvc3NpYmxlLgoKIyMgTGl2ZSBkZXBsb3ltZW50CgotICoqTmV0d29yayoqOiBHZW5MYXllciBTdHVkaW9uZXQgKGNoYWluIGlkIDYxOTk5KQotICoqQ29udHJhY3QqKjogYDB4OUM3Q0IwOURGZjZlM0NDOTk5MzYwZDE3YTY1QjlBODNGRDZFMDE0NWAKLSAqKkFwcCoqOiBodHRwczovL3Bvb3BpdHRvLmdpdGh1Yi5pby9yZWN5Y2xlZC12ZXJpZnkvCgojIyBSdW4gbG9jYWxseQoKYGBgYmFzaApjZCBmcm9udGVuZApucG0gaW5zdGFsbApucG0gcnVuIGRldgpucG0gcnVuIGJ1aWxkCmBgYAoKVGhlIGNvbW1pdHRlZCBgLmVudmAgaG9sZHMgdGhlIHB1YmxpYyBTdHVkaW9uZXQgY29uZmlnOyBubyBzZWNyZXRzIGFyZSByZXF1aXJlZC4gQ29weSBgLmVudi5leGFtcGxlYCB0byBgLmVudi5sb2NhbGAgb25seSB0byBvdmVycmlkZS4KCiMjIEVudmlyb25tZW50IHZhcmlhYmxlcwoKfCBOYW1lIHwgUmVxdWlyZWQgfCBEZXNjcmlwdGlvbiB8CnwtLS0tLS18LS0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfAp8IGBWSVRFX0NPTlRSQUNUX0FERFJFU1NgIHwgeWVzIHwgRGVwbG95ZWQgUmVjeWNsZWRWZXJpZnkgY29udHJhY3Qgb24gU3R1ZGlvbmV0IHwKfCBgVklURV9DSEFJTl9JRGAgfCB5ZXMgfCBHZW5MYXllciBjaGFpbiBpZCAoNjE5OTkpIHwKfCBgVklURV9SUENfVVJMYCB8IHllcyB8IFN0dWRpb25ldCBKU09OLVJQQyBlbmRwb2ludCB8CgojIyBEZXBsb3kgdGhlIGNvbnRyYWN0CgpgYGBiYXNoCm5weCBnZW5sYXllciBkZXBsb3kgLS1jb250cmFjdCBiYWNrZW5kL3JlY3ljbGVkLXZlcmlmeS5weSAtLWFyZ3MgImh0dHBzOi8vcmVnaXN0cnkuZXhhbXBsZS5vcmcvYXBpL2NlcnRpZmljYXRlcy8iCmBgYAoKIyMgQ29udHJhY3QgbWV0aG9kcyAoYFJlY3ljbGVkVmVyaWZ5YCkKCnwgTWV0aG9kIHwgVHlwZSB8IERlc2NyaXB0aW9uIHwKfC0tLS0tLS0tfC0tLS0tLXwtLS0tLS0tLS0tLS0tfAp8IGByZWdpc3Rlcl9sb3RgIHwgcGF5YWJsZSB8IFJlZ2lzdGVyIGEgbG90IGluIHRoZSBEQUc7IGJvbmQgc2NhbGVzIHdpdGggKG1hdGVyaWFsLCByZWdpb24pIGRlbnNpdHkuIHwKfCBgc3VibWl0X3RyYWNlYCB8IHdyaXRlIHwgQXR0YWNoIHRoZSBjaGFpbi1vZi1jdXN0b2R5IHRyYWNlIHRvIGEgcmVnaXN0ZXJlZCBsb3QuIHwKfCBgdmVyaWZ5X2NlcnRpZmljYXRlc2AgfCB3cml0ZSB8IEZldGNoIGFuZCB2YWxpZGF0ZSBjZXJ0aWZpY2F0ZSBJRHMgYWdhaW5zdCB0aGUgZGVwbG95bWVudC1waW5uZWQgZXh0ZXJuYWwgcmVnaXN0cnkuIHwKfCBgdmVyaWZ5X21hc3NfYmFsYW5jZWAgfCB3cml0ZSB8IERldGVybWluaXN0aWMgY2hlY2sgdGhhdCByZWN5Y2xlZCBtYXNzIG5ldmVyIGV4Y2VlZHMgcGFyZW50IGNhcGFjaXR5LiB8CnwgYGFkanVkaWNhdGVgIHwgd3JpdGUgfCBUMSBMTE0gYXVkaXQgcmVhZGluZyB0aGUgdHJhY2UgcGx1cyBlYWNoIHBhcmVudCdzIHZlcmlmaWVkIGhpc3RvcnkuIHwKfCBgYWRqdWRpY2F0ZV9kZWVwYCB8IHdyaXRlIHwgVDIgZGVlcCBhdWRpdDsgbWFuZGF0b3J5IGZvciBsb3RzIGF0IG9yIGFib3ZlIDUgdG9ubmVzLiB8CnwgYGlzc3VlX2xhYmVsYCB8IHdyaXRlIHwgU2V0dGxlIHRoZSBsb3Q6IGlzc3VlIG9yIGRlbnkgdGhlIGVjby1sYWJlbCwgcmVmdW5kIG9yIHNsYXNoIHRoZSBib25kLiB8CnwgYGNhc2NhZGVfZmxhZ19kZXNjZW5kYW50c2AgfCB3cml0ZSB8IEZsYWcgZXZlcnkgZGVzY2VuZGFudCBmb3IgcmUtYXVkaXQgd2hlbiBhbiBhbmNlc3RvciBpcyBvdmVydHVybmVkLiB8CnwgYGFkdmFuY2VfZXBvY2hgIHwgd3JpdGUgfCBBZG1pbiBhZHZhbmNlcyB0aGUgZXBvY2ggY2xvY2suIHwKfCBgc2V0X2FkbWluYCB8IHdyaXRlIHwgUm90YXRlIHRoZSBhZG1pbi9rZWVwZXIgYWRkcmVzcy4gfAp8IGBnZXRfbG90YCB8IHZpZXcgfCBGdWxsIGxvdCBkb3NzaWVyIHdpdGggREFHIGVkZ2VzLCBydWxpbmcsIGFuZCBwZXJjZW50YWdlcy4gfAp8IGBnZXRfbG90c19ieV9tYXRlcmlhbGAgfCB2aWV3IHwgTG90IGlkcyByZWdpc3RlcmVkIHVuZGVyIGEgbWF0ZXJpYWwgdGFnLiB8CnwgYGdldF9sb3RzX2J5X3JlZ2lvbmAgfCB2aWV3IHwgTG90IGlkcyByZWdpc3RlcmVkIGluIGEgcmVnaW9uLiB8CnwgYGdldF9tYXRlcmlhbF9yZWdpb25fZGVuc2l0eWAgfCB2aWV3IHwgUmVnaXN0cmF0aW9uIGRlbnNpdHkgZm9yIGEgKG1hdGVyaWFsLCByZWdpb24pIGNlbGwuIHwKfCBgZ2V0X2FuY2VzdG9yc2AgfCB2aWV3IHwgQWxsIGFuY2VzdG9yIGxvdCBpZHMgZm9yIGEgbG90LiB8CnwgYGdldF9kZXNjZW5kYW50c2AgfCB2aWV3IHwgQWxsIGRlc2NlbmRhbnQgbG90IGlkcyBmb3IgYSBsb3QuIHwKfCBgbGlzdF9sb3RzYCB8IHZpZXcgfCBBbGwgbG90IGlkcy4gfAp8IGBnZXRfcG9vbF9iYWxhbmNlYCB8IHZpZXcgfCBQb29sZWQgYm9uZCBiYWxhbmNlIGluIHdlaS4gfAp8IGBnZXRfY291bnRzYCB8IHZpZXcgfCBDb21wYWN0IGNvdW50ZXIgc3RyaW5nIGZvciB0aGUgZGFzaGJvYXJkLiB8CgojIyBMaWNlbnNlCgpNSVQK
+# Recur
+
+Recycled-content audit on [GenLayer](https://genlayer.com). Every lot is a node in a supply-chain DAG; before any model runs, the contract checks that a lot's claimed recycled mass never exceeds the verified mass of its parents, then a two-tier LLM scores the claim under validator consensus and writes an eco-label on-chain.
+
+## How it works
+
+1. Register a lot: submit its material, region, mass, claimed recycled mass, and parent lot ids. The required GEN bond scales with how many lots already crowd the same (material, region) cell.
+2. Submit the trace: the claimant attaches the chain-of-custody evidence for the lot.
+3. Mass balance: a deterministic pass walks one step up the DAG and rejects any lot whose claimed recycled mass exceeds its parents' verified capacity.
+4. Adjudicate: a T1 LLM reads the trace plus each parent's verified history and scores recycled content 0-100; lots at or above 5 tonnes escalate to a T2 deep audit.
+5. Settle: a verified lot earns the eco-label and a bond refund, a greenwash ruling slashes the bond, and if an ancestor is later overturned every descendant is flagged for re-audit.
+
+## Architecture
+
+```
+backend/recycled-verify.py   GenLayer Intelligent Contract (Python, runs on the GenVM)
+frontend/                    React + Vite + TypeScript dashboard (genlayer-js)
+```
+
+A claim is never judged in isolation: the deterministic mass-balance gate runs before the LLM, so validator consensus is spent only on lots that are already arithmetically possible.
+
+## Live deployment
+
+- **Network**: GenLayer Studionet (chain id 61999)
+- **Contract**: `0x9C7CB09DFf6e3CC999360d17a65B9A83FD6E0145`
+- **App**: https://poopitto.github.io/recycled-verify/
+
+## Run locally
+
+```bash
+cd frontend
+npm install
+npm run dev
+npm run build
+```
+
+The committed `.env` holds the public Studionet config; no secrets are required. Copy `.env.example` to `.env.local` only to override.
+
+## Environment variables
+
+| Name | Required | Description |
+|------|----------|-------------|
+| `VITE_CONTRACT_ADDRESS` | yes | Deployed RecycledVerify contract on Studionet |
+| `VITE_CHAIN_ID` | yes | GenLayer chain id (61999) |
+| `VITE_RPC_URL` | yes | Studionet JSON-RPC endpoint |
+
+## Deploy the contract
+
+```bash
+npx genlayer deploy --contract backend/recycled-verify.py --args "https://registry.example.org/api/certificates/"
+```
+
+## Contract methods (`RecycledVerify`)
+
+| Method | Type | Description |
+|--------|------|-------------|
+| `register_lot` | payable | Register a lot in the DAG; bond scales with (material, region) density. |
+| `submit_trace` | write | Attach the chain-of-custody trace to a registered lot. |
+| `verify_certificates` | write | Fetch and validate certificate IDs against the deployment-pinned external registry. |
+| `verify_mass_balance` | write | Deterministic check that recycled mass never exceeds parent capacity. |
+| `adjudicate` | write | T1 LLM audit reading the trace plus each parent's verified history. |
+| `adjudicate_deep` | write | T2 deep audit; mandatory for lots at or above 5 tonnes. |
+| `issue_label` | write | Settle the lot: issue or deny the eco-label, refund or slash the bond. |
+| `cascade_flag_descendants` | write | Flag every descendant for re-audit when an ancestor is overturned. |
+| `advance_epoch` | write | Admin advances the epoch clock. |
+| `set_admin` | write | Rotate the admin/keeper address. |
+| `get_lot` | view | Full lot dossier with DAG edges, ruling, and percentages. |
+| `get_lots_by_material` | view | Lot ids registered under a material tag. |
+| `get_lots_by_region` | view | Lot ids registered in a region. |
+| `get_material_region_density` | view | Registration density for a (material, region) cell. |
+| `get_ancestors` | view | All ancestor lot ids for a lot. |
+| `get_descendants` | view | All descendant lot ids for a lot. |
+| `list_lots` | view | All lot ids. |
+| `get_pool_balance` | view | Pooled bond balance in wei. |
+| `get_counts` | view | Compact counter string for the dashboard. |
+
+## License
+
+MIT
