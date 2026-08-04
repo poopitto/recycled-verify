@@ -1,1 +1,22 @@
-IyBkZXBlbmRlbmNpZXMgLyBidWlsZCBvdXRwdXQKbm9kZV9tb2R1bGVzLwpkaXN0Lwoudml0ZV9jYWNoZS8KKi50c2J1aWxkaW5mbwoKIyBlbnYg4oCUIGNvbW1pdCAuZW52IGFuZCAuZW52LmV4YW1wbGUgb25seTsgbmV2ZXIgbG9jYWwgb3ZlcnJpZGVzCi5lbnYubG9jYWwKLmVudi4qLmxvY2FsCgojIHZlcmNlbAoudmVyY2VsLwoKIyBweXRob24KX19weWNhY2hlX18vCioucHljCi5weXRlc3RfY2FjaGUvCgojIG9zIC8gbG9ncwouRFNfU3RvcmUKVGh1bWJzLmRiCioubG9nCg==
+# dependencies / build output
+node_modules/
+dist/
+.vite_cache/
+*.tsbuildinfo
+
+# env — commit .env and .env.example only; never local overrides
+.env.local
+.env.*.local
+
+# vercel
+.vercel/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# os / logs
+.DS_Store
+Thumbs.db
+*.log

@@ -1,1 +1,30 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFJlYWN0RE9NIGZyb20gInJlYWN0LWRvbS9jbGllbnQiOwppbXBvcnQgeyBXYWdtaVByb3ZpZGVyIH0gZnJvbSAid2FnbWkiOwppbXBvcnQgeyBRdWVyeUNsaWVudCwgUXVlcnlDbGllbnRQcm92aWRlciB9IGZyb20gIkB0YW5zdGFjay9yZWFjdC1xdWVyeSI7CmltcG9ydCB7IFJhaW5ib3dLaXRQcm92aWRlciwgbGlnaHRUaGVtZSB9IGZyb20gIkByYWluYm93LW1lL3JhaW5ib3draXQiOwppbXBvcnQgIkByYWluYm93LW1lL3JhaW5ib3draXQvc3R5bGVzLmNzcyI7CmltcG9ydCB7IGNvbmZpZyB9IGZyb20gIi4vd2FnbWkiOwppbXBvcnQgeyBBcHAgfSBmcm9tICIuL0FwcCI7CmltcG9ydCAiLi9pbmRleC5jc3MiOwoKY29uc3QgcXVlcnlDbGllbnQgPSBuZXcgUXVlcnlDbGllbnQoKTsKClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJvb3QiKSEpLnJlbmRlcigKICA8UmVhY3QuU3RyaWN0TW9kZT4KICAgIDxXYWdtaVByb3ZpZGVyIGNvbmZpZz17Y29uZmlnfT4KICAgICAgPFF1ZXJ5Q2xpZW50UHJvdmlkZXIgY2xpZW50PXtxdWVyeUNsaWVudH0+CiAgICAgICAgPFJhaW5ib3dLaXRQcm92aWRlcgogICAgICAgICAgdGhlbWU9e2xpZ2h0VGhlbWUoewogICAgICAgICAgICBhY2NlbnRDb2xvcjogIiNGRkQ0MDAiLAogICAgICAgICAgICBhY2NlbnRDb2xvckZvcmVncm91bmQ6ICIjMTYxNjE2IiwKICAgICAgICAgICAgYm9yZGVyUmFkaXVzOiAibm9uZSIsCiAgICAgICAgICAgIGZvbnRTdGFjazogInN5c3RlbSIsCiAgICAgICAgICB9KX0KICAgICAgICA+CiAgICAgICAgICA8QXBwIC8+CiAgICAgICAgPC9SYWluYm93S2l0UHJvdmlkZXI+CiAgICAgIDwvUXVlcnlDbGllbnRQcm92aWRlcj4KICAgIDwvV2FnbWlQcm92aWRlcj4KICA8L1JlYWN0LlN0cmljdE1vZGU+Cik7Cg==
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { WagmiProvider } from "wagmi";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
+import "@rainbow-me/rainbowkit/styles.css";
+import { config } from "./wagmi";
+import { App } from "./App";
+import "./index.css";
+
+const queryClient = new QueryClient();
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider
+          theme={lightTheme({
+            accentColor: "#FFD400",
+            accentColorForeground: "#161616",
+            borderRadius: "none",
+            fontStack: "system",
+          })}
+        >
+          <App />
+        </RainbowKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
+  </React.StrictMode>
+);

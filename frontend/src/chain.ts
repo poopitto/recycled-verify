@@ -1,1 +1,21 @@
-aW1wb3J0IHsgZGVmaW5lQ2hhaW4gfSBmcm9tICJ2aWVtIjsKCi8vIFB1YmxpYyBHZW5MYXllciBTdHVkaW9uZXQgY29uZmlndXJhdGlvbi4gVmFsdWVzIGNvbWUgZnJvbSB0aGUgY29tbWl0dGVkCi8vIC5lbnYgKHNlZSAuZW52LmV4YW1wbGUpOyB0aGUgZmFsbGJhY2tzIGtlZXAgdGhlIGRlcGxveWVkIGFkZHJlc3MgZml4ZWQgaWYgYQovLyBidWlsZCBydW5zIHdpdGhvdXQgYW4gZW52IGZpbGUuIHJlY3ljbGVkLXZlcmlmeSAoUmVjdXIpIHYyIOKAlCBTdHVkaW9uZXQuCmV4cG9ydCBjb25zdCBHRU5MQVlFUl9DSEFJTl9JRCA9IE51bWJlcihpbXBvcnQubWV0YS5lbnYuVklURV9DSEFJTl9JRCA/PyA2MTk5OSk7CmV4cG9ydCBjb25zdCBHRU5MQVlFUl9SUENfVVJMID0KICBpbXBvcnQubWV0YS5lbnYuVklURV9SUENfVVJMID8/ICJodHRwczovL3N0dWRpby5nZW5sYXllci5jb20vYXBpIjsKZXhwb3J0IGNvbnN0IENPTlRSQUNUX0FERFJFU1MgPSAoaW1wb3J0Lm1ldGEuZW52LlZJVEVfQ09OVFJBQ1RfQUREUkVTUyA/PwogICIweDlDN0NCMDlERmY2ZTNDQzk5OTM2MGQxN2E2NUI5QTgzRkQ2RTAxNDUiKSBhcyBgMHgke3N0cmluZ31gOwoKZXhwb3J0IGNvbnN0IGdlbkxheWVyU3R1ZGlvbmV0ID0gZGVmaW5lQ2hhaW4oewogIGlkOiBHRU5MQVlFUl9DSEFJTl9JRCwKICBuYW1lOiAiR2VuTGF5ZXIgU3R1ZGlvbmV0IiwKICBuYXRpdmVDdXJyZW5jeTogeyBuYW1lOiAiR0VOIiwgc3ltYm9sOiAiR0VOIiwgZGVjaW1hbHM6IDE4IH0sCiAgcnBjVXJsczogewogICAgZGVmYXVsdDogeyBodHRwOiBbR0VOTEFZRVJfUlBDX1VSTF0gfSwKICAgIHB1YmxpYzogeyBodHRwOiBbR0VOTEFZRVJfUlBDX1VSTF0gfSwKICB9LAogIHRlc3RuZXQ6IHRydWUsCn0pOwo=
+import { defineChain } from "viem";
+
+// Public GenLayer Studionet configuration. Values come from the committed
+// .env (see .env.example); the fallbacks keep the deployed address fixed if a
+// build runs without an env file. recycled-verify (Recur) v2 — Studionet.
+export const GENLAYER_CHAIN_ID = Number(import.meta.env.VITE_CHAIN_ID ?? 61999);
+export const GENLAYER_RPC_URL =
+  import.meta.env.VITE_RPC_URL ?? "https://studio.genlayer.com/api";
+export const CONTRACT_ADDRESS = (import.meta.env.VITE_CONTRACT_ADDRESS ??
+  "0x08487E30664a6fDFcF532C195499dC0CD33346FA") as `0x${string}`;
+
+export const genLayerStudionet = defineChain({
+  id: GENLAYER_CHAIN_ID,
+  name: "GenLayer Studionet",
+  nativeCurrency: { name: "GEN", symbol: "GEN", decimals: 18 },
+  rpcUrls: {
+    default: { http: [GENLAYER_RPC_URL] },
+    public: { http: [GENLAYER_RPC_URL] },
+  },
+  testnet: true,
+});

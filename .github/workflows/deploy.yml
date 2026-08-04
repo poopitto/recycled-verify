@@ -1,1 +1,52 @@
-bmFtZTogRGVwbG95IGZyb250ZW5kIHRvIEdpdEh1YiBQYWdlcwoKb246CiAgcHVzaDoKICAgIGJyYW5jaGVzOiBbbWFpbl0KICB3b3JrZmxvd19kaXNwYXRjaDoKCnBlcm1pc3Npb25zOgogIGNvbnRlbnRzOiByZWFkCiAgcGFnZXM6IHdyaXRlCiAgaWQtdG9rZW46IHdyaXRlCgpjb25jdXJyZW5jeToKICBncm91cDogcGFnZXMKICBjYW5jZWwtaW4tcHJvZ3Jlc3M6IHRydWUKCmpvYnM6CiAgYnVpbGQ6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QHY0CiAgICAgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1ub2RlQHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIG5vZGUtdmVyc2lvbjogMjAKICAgICAgLSBuYW1lOiBJbnN0YWxsIGRlcGVuZGVuY2llcwogICAgICAgIHdvcmtpbmctZGlyZWN0b3J5OiBmcm9udGVuZAogICAgICAgIHJ1bjogbnBtIGluc3RhbGwKICAgICAgLSBuYW1lOiBCdWlsZAogICAgICAgIHdvcmtpbmctZGlyZWN0b3J5OiBmcm9udGVuZAogICAgICAgIHJ1bjogbnBtIHJ1biBidWlsZAogICAgICAtIHVzZXM6IGFjdGlvbnMvY29uZmlndXJlLXBhZ2VzQHY1CiAgICAgIC0gdXNlczogYWN0aW9ucy91cGxvYWQtcGFnZXMtYXJ0aWZhY3RAdjMKICAgICAgICB3aXRoOgogICAgICAgICAgcGF0aDogZnJvbnRlbmQvZGlzdAoKICBkZXBsb3k6CiAgICBuZWVkczogYnVpbGQKICAgIHJ1bnMtb246IHVidW50dS1sYXRlc3QKICAgIGVudmlyb25tZW50OgogICAgICBuYW1lOiBnaXRodWItcGFnZXMKICAgICAgdXJsOiAke3sgc3RlcHMuZGVwbG95bWVudC5vdXRwdXRzLnBhZ2VfdXJsIH19CiAgICBzdGVwczoKICAgICAgLSBpZDogZGVwbG95bWVudAogICAgICAgIHVzZXM6IGFjdGlvbnMvZGVwbG95LXBhZ2VzQHY0Cg==
+name: Deploy frontend to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build
+        working-directory: frontend
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

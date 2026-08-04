@@ -1,1 +1,22 @@
-aW1wb3J0IHsgY29ubmVjdG9yc0ZvcldhbGxldHMgfSBmcm9tICJAcmFpbmJvdy1tZS9yYWluYm93a2l0IjsKaW1wb3J0IHsgaW5qZWN0ZWRXYWxsZXQgfSBmcm9tICJAcmFpbmJvdy1tZS9yYWluYm93a2l0L3dhbGxldHMiOwppbXBvcnQgeyBjcmVhdGVDb25maWcsIGh0dHAgfSBmcm9tICJ3YWdtaSI7CmltcG9ydCB7IGdlbkxheWVyU3R1ZGlvbmV0LCBHRU5MQVlFUl9SUENfVVJMIH0gZnJvbSAiLi9jaGFpbiI7Cgpjb25zdCBjb25uZWN0b3JzID0gY29ubmVjdG9yc0ZvcldhbGxldHMoCiAgW3sgZ3JvdXBOYW1lOiAiSW5zdGFsbGVkIiwgd2FsbGV0czogW2luamVjdGVkV2FsbGV0XSB9XSwKICB7IGFwcE5hbWU6ICJSZWN1ciDigJQgcmVjeWNsZWQtY29udGVudCBhdWRpdCIsIHByb2plY3RJZDogInJlY3ljbGVkLXZlcmlmeSIgfQopOwoKZXhwb3J0IGNvbnN0IGNvbmZpZyA9IGNyZWF0ZUNvbmZpZyh7CiAgY29ubmVjdG9ycywKICBjaGFpbnM6IFtnZW5MYXllclN0dWRpb25ldF0sCiAgdHJhbnNwb3J0czogeyBbZ2VuTGF5ZXJTdHVkaW9uZXQuaWRdOiBodHRwKEdFTkxBWUVSX1JQQ19VUkwpIH0sCiAgc3NyOiBmYWxzZSwKfSk7CgpkZWNsYXJlIG1vZHVsZSAid2FnbWkiIHsKICBpbnRlcmZhY2UgUmVnaXN0ZXIgewogICAgY29uZmlnOiB0eXBlb2YgY29uZmlnOwogIH0KfQo=
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
+import { injectedWallet } from "@rainbow-me/rainbowkit/wallets";
+import { createConfig, http } from "wagmi";
+import { genLayerStudionet, GENLAYER_RPC_URL } from "./chain";
+
+const connectors = connectorsForWallets(
+  [{ groupName: "Installed", wallets: [injectedWallet] }],
+  { appName: "Recur — recycled-content audit", projectId: "recycled-verify" }
+);
+
+export const config = createConfig({
+  connectors,
+  chains: [genLayerStudionet],
+  transports: { [genLayerStudionet.id]: http(GENLAYER_RPC_URL) },
+  ssr: false,
+});
+
+declare module "wagmi" {
+  interface Register {
+    config: typeof config;
+  }
+}

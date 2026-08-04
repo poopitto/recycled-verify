@@ -1,1 +1,487 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50LCBjcmVhdGVBY2NvdW50IH0gZnJvbSAiZ2VubGF5ZXItanMiOwppbXBvcnQgeyBzdHVkaW9uZXQgfSBmcm9tICJnZW5sYXllci1qcy9jaGFpbnMiOwppbXBvcnQgeyBUcmFuc2FjdGlvblN0YXR1cyB9IGZyb20gImdlbmxheWVyLWpzL3R5cGVzIjsKaW1wb3J0IHsgQ09OVFJBQ1RfQUREUkVTUyB9IGZyb20gIi4vY2hhaW4iOwoKdHlwZSBIZXggPSBgMHgke3N0cmluZ31gOwpjb25zdCBUSU1FT1VUX01TID0gMjQwXzAwMDsKCi8vIOKUgOKUgCBEb21haW4gdm9jYWJ1bGFyeSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAtLQpleHBvcnQgdHlwZSBSdWxpbmcgPQogIHwgIlZFUklGSUVEIgogIHwgIlBBUlRJQUwiCiAgfCAiR1JFRU5XQVNIIgogIHwgIk1BU1NfQkFMQU5DRV9GQUlMIgogIHwgIkRFUEVOREVOQ1lfRkxBR0dFRCIKICB8ICIiOwoKLy8gc3RhdHVzOiAwIFJFR0lTVEVSRUQsIDEgVFJBQ0VELCAyIEJBTEFOQ0VfT0ssIDMgQVVESVRFRF9UMSwKLy8gICAgICAgICA0IEFVRElURURfVDIsIDUgTEFCRUxFRCwgNiBSRUpFQ1RFRCwgNyBGTEFHR0VECmV4cG9ydCBjb25zdCBTVEFUVVNfTEFCRUwgPSBbCiAgIlJFR0lTVEVSRUQiLAogICJUUkFDRUQiLAogICJCQUxBTkNFX09LIiwKICAiQVVESVRFRF9UMSIsCiAgIkFVRElURURfVDIiLAogICJMQUJFTEVEIiwKICAiUkVKRUNURUQiLAogICJGTEFHR0VEIiwKXSBhcyBjb25zdDsKCmV4cG9ydCBjb25zdCBTVF9SRUdJU1RFUkVEID0gMDsKZXhwb3J0IGNvbnN0IFNUX1RSQUNFRCA9IDE7CmV4cG9ydCBjb25zdCBTVF9CQUxBTkNFX09LID0gMjsKZXhwb3J0IGNvbnN0IFNUX0FVRElURURfVDEgPSAzOwpleHBvcnQgY29uc3QgU1RfQVVESVRFRF9UMiA9IDQ7CmV4cG9ydCBjb25zdCBTVF9MQUJFTEVEID0gNTsKZXhwb3J0IGNvbnN0IFNUX1JFSkVDVEVEID0gNjsKZXhwb3J0IGNvbnN0IFNUX0ZMQUdHRUQgPSA3OwoKZXhwb3J0IGNvbnN0IEhJR0hfVkFMVUVfTE9UX0tHID0gNTAwMDsKZXhwb3J0IGNvbnN0IE1BU1NfQkFMQU5DRV9UT0xFUkFOQ0VfS0cgPSA1OwpleHBvcnQgY29uc3QgTUFYX1BBUkVOVF9MT1RTID0gODsKCi8vIOKUgOKUgCBEb21haW4gdHlwZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSALS0KZXhwb3J0IGludGVyZmFjZSBMb3RWaWV3IHsKICBsb3RJZDogbnVtYmVyOwogIGNsYWltYW50OiBzdHJpbmc7CiAgcHVibGljTGFiZWw6IHN0cmluZzsKICBtYXRlcmlhbDogc3RyaW5nOwogIHJlZ2lvbjogc3RyaW5nOwogIGxvdE1hc3NLZzogbnVtYmVyOwogIGNsYWltZWRSZWN5Y2xlZE1hc3NLZzogbnVtYmVyOwogIHBhcmVudExvdElkczogbnVtYmVyW107CiAgY2hpbGRMb3RJZHM6IG51bWJlcltdOwogIHRyYWNlOiBzdHJpbmc7CiAgYm9uZFdlaTogc3RyaW5nOwogIHN0YXR1czogbnVtYmVyOwogIHJ1bGluZzogUnVsaW5nOwogIHZlcmlmaWVkUmVjeWNsZWRQY3Q6IG51bWJlcjsKICByZWN5Y2xlZFBjdFQxOiBudW1iZXI7CiAgcmVjeWNsZWRQY3RUMjogbnVtYmVyOwogIG1hc3NCYWxhbmNlT2s6IGJvb2xlYW47CiAgbGFiZWxJc3N1ZWQ6IGJvb2xlYW47CiAgcmF0aW9uYWxlOiBzdHJpbmc7CiAgc3liaWxEZW5zaXR5OiBudW1iZXI7CiAgcmVnaXN0ZXJlZEVwb2NoOiBudW1iZXI7CiAgYXVkaXRlZEVwb2NoOiBudW1iZXI7CiAgbGFiZWxlZEVwb2NoOiBudW1iZXI7CiAgYW5jZXN0b3JGbGFnU291cmNlOiBudW1iZXI7CiAgY2VydGlmaWNhdGVJZHNDc3Y6IHN0cmluZzsKICBjZXJ0aWZpY2F0ZUNoZWNrU3RhdHVzOiAiTk9UX0NIRUNLRUQiIHwgIlZFUklGSUVEIiB8ICJGQUlMRUQiOwogIGNlcnRpZmljYXRlRXZpZGVuY2U6IHN0cmluZzsKICBjZXJ0aWZpY2F0ZUNoZWNrZWRFcG9jaDogbnVtYmVyOwp9CmV4cG9ydCBpbnRlcmZhY2UgTG90Um93IGV4dGVuZHMgTG90VmlldyB7CiAgaWQ6IG51bWJlcjsKfQoKZXhwb3J0IGludGVyZmFjZSBDb3VudHMgewogIG5leHQ6IG51bWJlcjsKICBhdWRpdGVkOiBudW1iZXI7CiAgdmVyaWZpZWQ6IG51bWJlcjsKICByZWplY3RlZDogbnVtYmVyOwogIGNhc2NhZGVGbGFnZ2VkOiBudW1iZXI7CiAgdG90YWxMYWJlbHM6IG51bWJlcjsKICBlcG9jaDogbnVtYmVyOwp9CgpleHBvcnQgaW50ZXJmYWNlIE1hc3NCYWxhbmNlUmVzdWx0IHsKICBsb3RJZDogbnVtYmVyOwogIG1hc3NCYWxhbmNlT2s6IGJvb2xlYW47CiAgY2xhaW1lZFJlY3ljbGVkS2c6IG51bWJlcjsKICBwYXJlbnRDYXBhY2l0eUtnOiBudW1iZXI7CiAgcGFyZW50czogeyBwYXJlbnRJZDogbnVtYmVyOyBjb250cmlidXRlZEtnOiBudW1iZXI7IHBhcmVudFN0YXR1czogbnVtYmVyIH1bXTsKfQoKLy8g4pSA4pSAIENsaWVudHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSALS0tCmZ1bmN0aW9uIHJlYWRDbGllbnQoKSB7CiAgcmV0dXJuIGNyZWF0ZUNsaWVudCh7IGNoYWluOiBzdHVkaW9uZXQsIGFjY291bnQ6IGNyZWF0ZUFjY291bnQoKSB9KTsKfQpmdW5jdGlvbiB3cml0ZUNsaWVudChhY2NvdW50OiBIZXgpIHsKICByZXR1cm4gY3JlYXRlQ2xpZW50KHsgY2hhaW46IHN0dWRpb25ldCwgYWNjb3VudCB9KTsKfQoKYXN5bmMgZnVuY3Rpb24gd2FpdEFjY2VwdGVkKGNsaWVudDogYW55LCBoYXNoOiBIZXgpIHsKICBsZXQgdGltZXI6IFJldHVyblR5cGU8dHlwZW9mIHNldFRpbWVvdXQ+IHwgdW5kZWZpbmVkOwogIGNvbnN0IHRpbWVvdXQgPSBuZXcgUHJvbWlzZTxuZXZlcj4oKF8sIHJlamVjdCkgPT4gewogICAgdGltZXIgPSBzZXRUaW1lb3V0KCgpID0+IHJlamVjdChuZXcgRXJyb3IoIlRyYW5zYWN0aW9uIHRpbWVkIG91dCIpKSwgVElNRU9VVF9NUyk7CiAgfSk7CiAgdHJ5IHsKICAgIGF3YWl0IFByb21pc2UucmFjZShbCiAgICAgIGNsaWVudC53YWl0Rm9yVHJhbnNhY3Rpb25SZWNlaXB0KHsKICAgICAgICBoYXNoOiBoYXNoIGFzIG5ldmVyLAogICAgICAgIHN0YXR1czogVHJhbnNhY3Rpb25TdGF0dXMuQUNDRVBURUQsCiAgICAgICAgaW50ZXJ2YWw6IDUwMDAsCiAgICAgICAgcmV0cmllczogNjQsCiAgICAgIH0pLAogICAgICB0aW1lb3V0LAogICAgXSk7CiAgfSBmaW5hbGx5IHsKICAgIGlmICh0aW1lcikgY2xlYXJUaW1lb3V0KHRpbWVyKTsKICB9Cn0KCi8vIOKUgOKUgCBEZWZlbnNpdmUgcGFyc2luZyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAtLS0KZnVuY3Rpb24gcGljayhvYmo6IGFueSwga2V5OiBzdHJpbmcsIGlkeDogbnVtYmVyKTogYW55IHsKICBpZiAob2JqID09IG51bGwpIHJldHVybiB1bmRlZmluZWQ7CiAgaWYgKEFycmF5LmlzQXJyYXkob2JqKSkgcmV0dXJuIG9ialtpZHhdOwogIGlmICh0eXBlb2Ygb2JqID09PSAib2JqZWN0IiAmJiBrZXkgaW4gb2JqKSByZXR1cm4gb2JqW2tleV07CiAgcmV0dXJuIHVuZGVmaW5lZDsKfQpmdW5jdGlvbiBudW1BcnIodjogYW55KTogbnVtYmVyW10gewogIGlmICghQXJyYXkuaXNBcnJheSh2KSkgcmV0dXJuIFtdOwogIHJldHVybiB2Lm1hcCgoeCkgPT4gTnVtYmVyKHgpIHx8IDApOwp9CgovLyDilIDilIAgQm9uZCBlc3RpbWF0aW9uIChtaXJyb3JzIHRoZSBjb250cmFjdCdzIGRlbnNpdHkgZm9ybXVsYSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACi8vIHJlcXVpcmVkID0gTUlOX0JPTkRfV0VJICogKERFTlNJVFlfREVOT00gKyBkZW5zaXR5ICogREVOU0lUWV9OVU1FUikgLyBERU5TSVRZX0RFTk9NCmV4cG9ydCBjb25zdCBNSU5fQk9ORF9XRUkgPSA1XzAwMF8wMDBfMDAwXzAwMF8wMDBuOyAvLyAwLjAwNSBHRU4KY29uc3QgREVOU0lUWV9OVU1FUiA9IDE1bjsKY29uc3QgREVOU0lUWV9ERU5PTSA9IDEwbjsKZXhwb3J0IGZ1bmN0aW9uIHJlcXVpcmVkQm9uZFdlaShkZW5zaXR5OiBudW1iZXIpOiBiaWdpbnQgewogIGNvbnN0IGQgPSBCaWdJbnQoTWF0aC5tYXgoMCwgTWF0aC5mbG9vcihkZW5zaXR5KSkpOwogIHJldHVybiAoTUlOX0JPTkRfV0VJICogKERFTlNJVFlfREVOT00gKyBkICogREVOU0lUWV9OVU1FUikpIC8gREVOU0lUWV9ERU5PTTsKfQpleHBvcnQgZnVuY3Rpb24gd2VpVG9HZW4od2VpOiBiaWdpbnQpOiBzdHJpbmcgewogIC8vIDE4IGRlY2ltYWxzLCByZW5kZXIgdXAgdG8gNiBmcmFjdGlvbmFsIGRpZ2l0cy4KICBjb25zdCB3aG9sZSA9IHdlaSAvIDFfMDAwXzAwMF8wMDBfMDAwXzAwMF8wMDBuOwogIGNvbnN0IGZyYWMgPSB3ZWkgJSAxXzAwMF8wMDBfMDAwXzAwMF8wMDBfMDAwbjsKICBjb25zdCBmcmFjU3RyID0gZnJhYy50b1N0cmluZygpLnBhZFN0YXJ0KDE4LCAiMCIpLnNsaWNlKDAsIDYpLnJlcGxhY2UoLzArJC8sICIiKTsKICByZXR1cm4gZnJhY1N0ciA/IGAke3dob2xlfS4ke2ZyYWNTdHJ9YCA6IGAke3dob2xlfWA7Cn0KCi8vIOKUgOKUgCBXcml0ZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSALS0tCmV4cG9ydCBhc3luYyBmdW5jdGlvbiByZWdpc3RlckxvdCgKICBhY2NvdW50OiBIZXgsCiAgZjogewogICAgcHVibGljTGFiZWw6IHN0cmluZzsKICAgIG1hdGVyaWFsOiBzdHJpbmc7CiAgICByZWdpb246IHN0cmluZzsKICAgIGxvdE1hc3NLZzogbnVtYmVyOwogICAgY2xhaW1lZFJlY3ljbGVkTWFzc0tnOiBudW1iZXI7CiAgICBwYXJlbnRMb3RJZHNDc3Y6IHN0cmluZzsKICAgIGJvbmRXZWk6IGJpZ2ludDsKICB9Cik6IFByb21pc2U8bnVtYmVyPiB7CiAgY29uc3Qgd2MgPSB3cml0ZUNsaWVudChhY2NvdW50KTsKICBjb25zdCBoID0gKGF3YWl0IHdjLndyaXRlQ29udHJhY3QoewogICAgYWRkcmVzczogQ09OVFJBQ1RfQUREUkVTUyBhcyBIZXgsCiAgICBmdW5jdGlvbk5hbWU6ICJyZWdpc3Rlcl9sb3QiLAogICAgYXJnczogWwogICAgICBmLnB1YmxpY0xhYmVsLnRyaW0oKSwKICAgICAgZi5tYXRlcmlhbC50cmltKCksCiAgICAgIGYucmVnaW9uLnRyaW0oKSwKICAgICAgTWF0aC5mbG9vcihmLmxvdE1hc3NLZyksCiAgICAgIE1hdGguZmxvb3IoZi5jbGFpbWVkUmVjeWNsZWRNYXNzS2cpLAogICAgICBmLnBhcmVudExvdElkc0Nzdi50cmltKCksCiAgICBdLAogICAgdmFsdWU6IGYuYm9uZFdlaSwKICB9KSkgYXMgSGV4OwogIGF3YWl0IHdhaXRBY2NlcHRlZCh3YywgaCk7CiAgY29uc3QgYyA9IGF3YWl0IGdldENvdW50cygpOwogIHJldHVybiBjLm5leHQgLSAxOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gc3VibWl0VHJhY2UoCiAgYWNjb3VudDogSGV4LAogIGxvdElkOiBudW1iZXIsCiAgdHJhY2U6IHN0cmluZywKICBjZXJ0aWZpY2F0ZUlkc0Nzdjogc3RyaW5nCik6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IHdjID0gd3JpdGVDbGllbnQoYWNjb3VudCk7CiAgY29uc3QgaCA9IChhd2FpdCB3Yy53cml0ZUNvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAic3VibWl0X3RyYWNlIiwKICAgIGFyZ3M6IFtsb3RJZCwgdHJhY2UudHJpbSgpLCBjZXJ0aWZpY2F0ZUlkc0Nzdi50cmltKCldLAogICAgdmFsdWU6IDBuLAogIH0pKSBhcyBIZXg7CiAgYXdhaXQgd2FpdEFjY2VwdGVkKHdjLCBoKTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHZlcmlmeUNlcnRpZmljYXRlcyhhY2NvdW50OiBIZXgsIGxvdElkOiBudW1iZXIpOiBQcm9taXNlPHZvaWQ+IHsKICBjb25zdCB3YyA9IHdyaXRlQ2xpZW50KGFjY291bnQpOwogIGNvbnN0IGggPSAoYXdhaXQgd2Mud3JpdGVDb250cmFjdCh7CiAgICBhZGRyZXNzOiBDT05UUkFDVF9BRERSRVNTIGFzIEhleCwKICAgIGZ1bmN0aW9uTmFtZTogInZlcmlmeV9jZXJ0aWZpY2F0ZXMiLAogICAgYXJnczogW2xvdElkXSwKICAgIHZhbHVlOiAwbiwKICB9KSkgYXMgSGV4OwogIGF3YWl0IHdhaXRBY2NlcHRlZCh3YywgaCk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiB2ZXJpZnlNYXNzQmFsYW5jZShhY2NvdW50OiBIZXgsIGxvdElkOiBudW1iZXIpOiBQcm9taXNlPHZvaWQ+IHsKICBjb25zdCB3YyA9IHdyaXRlQ2xpZW50KGFjY291bnQpOwogIGNvbnN0IGggPSAoYXdhaXQgd2Mud3JpdGVDb250cmFjdCh7CiAgICBhZGRyZXNzOiBDT05UUkFDVF9BRERSRVNTIGFzIEhleCwKICAgIGZ1bmN0aW9uTmFtZTogInZlcmlmeV9tYXNzX2JhbGFuY2UiLAogICAgYXJnczogW2xvdElkXSwKICAgIHZhbHVlOiAwbiwKICB9KSkgYXMgSGV4OwogIGF3YWl0IHdhaXRBY2NlcHRlZCh3YywgaCk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBhZGp1ZGljYXRlKGFjY291bnQ6IEhleCwgbG90SWQ6IG51bWJlcik6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IHdjID0gd3JpdGVDbGllbnQoYWNjb3VudCk7CiAgY29uc3QgaCA9IChhd2FpdCB3Yy53cml0ZUNvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiYWRqdWRpY2F0ZSIsCiAgICBhcmdzOiBbbG90SWRdLAogICAgdmFsdWU6IDBuLAogIH0pKSBhcyBIZXg7CiAgYXdhaXQgd2FpdEFjY2VwdGVkKHdjLCBoKTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGFkanVkaWNhdGVEZWVwKGFjY291bnQ6IEhleCwgbG90SWQ6IG51bWJlcik6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IHdjID0gd3JpdGVDbGllbnQoYWNjb3VudCk7CiAgY29uc3QgaCA9IChhd2FpdCB3Yy53cml0ZUNvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiYWRqdWRpY2F0ZV9kZWVwIiwKICAgIGFyZ3M6IFtsb3RJZF0sCiAgICB2YWx1ZTogMG4sCiAgfSkpIGFzIEhleDsKICBhd2FpdCB3YWl0QWNjZXB0ZWQod2MsIGgpOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gaXNzdWVMYWJlbChhY2NvdW50OiBIZXgsIGxvdElkOiBudW1iZXIpOiBQcm9taXNlPHZvaWQ+IHsKICBjb25zdCB3YyA9IHdyaXRlQ2xpZW50KGFjY291bnQpOwogIGNvbnN0IGggPSAoYXdhaXQgd2Mud3JpdGVDb250cmFjdCh7CiAgICBhZGRyZXNzOiBDT05UUkFDVF9BRERSRVNTIGFzIEhleCwKICAgIGZ1bmN0aW9uTmFtZTogImlzc3VlX2xhYmVsIiwKICAgIGFyZ3M6IFtsb3RJZF0sCiAgICB2YWx1ZTogMG4sCiAgfSkpIGFzIEhleDsKICBhd2FpdCB3YWl0QWNjZXB0ZWQod2MsIGgpOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gY2FzY2FkZUZsYWdEZXNjZW5kYW50cyhhY2NvdW50OiBIZXgsIGFuY2VzdG9yTG90SWQ6IG51bWJlcik6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IHdjID0gd3JpdGVDbGllbnQoYWNjb3VudCk7CiAgY29uc3QgaCA9IChhd2FpdCB3Yy53cml0ZUNvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiY2FzY2FkZV9mbGFnX2Rlc2NlbmRhbnRzIiwKICAgIGFyZ3M6IFthbmNlc3RvckxvdElkXSwKICAgIHZhbHVlOiAwbiwKICB9KSkgYXMgSGV4OwogIGF3YWl0IHdhaXRBY2NlcHRlZCh3YywgaCk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBhZHZhbmNlRXBvY2goYWNjb3VudDogSGV4KTogUHJvbWlzZTx2b2lkPiB7CiAgY29uc3Qgd2MgPSB3cml0ZUNsaWVudChhY2NvdW50KTsKICBjb25zdCBoID0gKGF3YWl0IHdjLndyaXRlQ29udHJhY3QoewogICAgYWRkcmVzczogQ09OVFJBQ1RfQUREUkVTUyBhcyBIZXgsCiAgICBmdW5jdGlvbk5hbWU6ICJhZHZhbmNlX2Vwb2NoIiwKICAgIGFyZ3M6IFtdLAogICAgdmFsdWU6IDBuLAogIH0pKSBhcyBIZXg7CiAgYXdhaXQgd2FpdEFjY2VwdGVkKHdjLCBoKTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNldEFkbWluKGFjY291bnQ6IEhleCwgbmV3QWRtaW46IHN0cmluZyk6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IHdjID0gd3JpdGVDbGllbnQoYWNjb3VudCk7CiAgY29uc3QgaCA9IChhd2FpdCB3Yy53cml0ZUNvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAic2V0X2FkbWluIiwKICAgIGFyZ3M6IFtuZXdBZG1pbi50cmltKCldLAogICAgdmFsdWU6IDBuLAogIH0pKSBhcyBIZXg7CiAgYXdhaXQgd2FpdEFjY2VwdGVkKHdjLCBoKTsKfQoKLy8g4pSA4pSAIFZpZXdzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgC0tLQpleHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0TG90KGxvdElkOiBudW1iZXIpOiBQcm9taXNlPExvdFZpZXc+IHsKICBjb25zdCByOiBhbnkgPSBhd2FpdCByZWFkQ2xpZW50KCkucmVhZENvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiZ2V0X2xvdCIsCiAgICBhcmdzOiBbbG90SWRdLAogIH0pOwogIHJldHVybiB7CiAgICBsb3RJZDogTnVtYmVyKHBpY2sociwgImxvdF9pZCIsIDApID8/IGxvdElkKSwKICAgIGNsYWltYW50OiBTdHJpbmcocGljayhyLCAiY2xhaW1hbnQiLCAxKSA/PyAiIiksCiAgICBwdWJsaWNMYWJlbDogU3RyaW5nKHBpY2sociwgInB1YmxpY19sYWJlbCIsIDIpID8/ICIiKSwKICAgIG1hdGVyaWFsOiBTdHJpbmcocGljayhyLCAibWF0ZXJpYWwiLCAzKSA/PyAiIiksCiAgICByZWdpb246IFN0cmluZyhwaWNrKHIsICJyZWdpb24iLCA0KSA/PyAiIiksCiAgICBsb3RNYXNzS2c6IE51bWJlcihwaWNrKHIsICJsb3RfbWFzc19rZyIsIDUpID8/IDApLAogICAgY2xhaW1lZFJlY3ljbGVkTWFzc0tnOiBOdW1iZXIocGljayhyLCAiY2xhaW1lZF9yZWN5Y2xlZF9tYXNzX2tnIiwgNikgPz8gMCksCiAgICBwYXJlbnRMb3RJZHM6IG51bUFycihwaWNrKHIsICJwYXJlbnRfbG90X2lkcyIsIDcpKSwKICAgIGNoaWxkTG90SWRzOiBudW1BcnIocGljayhyLCAiY2hpbGRfbG90X2lkcyIsIDgpKSwKICAgIHRyYWNlOiBTdHJpbmcocGljayhyLCAidHJhY2UiLCA5KSA/PyAiIiksCiAgICBib25kV2VpOiBTdHJpbmcocGljayhyLCAiYm9uZF93ZWkiLCAxMCkgPz8gIjAiKSwKICAgIHN0YXR1czogTnVtYmVyKHBpY2sociwgInN0YXR1cyIsIDExKSA/PyAwKSwKICAgIHJ1bGluZzogU3RyaW5nKHBpY2sociwgInJ1bGluZyIsIDEyKSA/PyAiIikgYXMgUnVsaW5nLAogICAgdmVyaWZpZWRSZWN5Y2xlZFBjdDogTnVtYmVyKHBpY2sociwgInZlcmlmaWVkX3JlY3ljbGVkX3BjdCIsIDEzKSA/PyAwKSwKICAgIHJlY3ljbGVkUGN0VDE6IE51bWJlcihwaWNrKHIsICJyZWN5Y2xlZF9wY3RfdDEiLCAxNCkgPz8gMCksCiAgICByZWN5Y2xlZFBjdFQyOiBOdW1iZXIocGljayhyLCAicmVjeWNsZWRfcGN0X3QyIiwgMTUpID8/IDApLAogICAgbWFzc0JhbGFuY2VPazogQm9vbGVhbihwaWNrKHIsICJtYXNzX2JhbGFuY2Vfb2siLCAxNikgPz8gZmFsc2UpLAogICAgbGFiZWxJc3N1ZWQ6IEJvb2xlYW4ocGljayhyLCAibGFiZWxfaXNzdWVkIiwgMTcpID8/IGZhbHNlKSwKICAgIHJhdGlvbmFsZTogU3RyaW5nKHBpY2sociwgInJhdGlvbmFsZSIsIDE4KSA/PyAiIiksCiAgICBzeWJpbERlbnNpdHk6IE51bWJlcihwaWNrKHIsICJzeWJpbF9kZW5zaXR5IiwgMTkpID8/IDApLAogICAgcmVnaXN0ZXJlZEVwb2NoOiBOdW1iZXIocGljayhyLCAicmVnaXN0ZXJlZF9lcG9jaCIsIDIwKSA/PyAwKSwKICAgIGF1ZGl0ZWRFcG9jaDogTnVtYmVyKHBpY2sociwgImF1ZGl0ZWRfZXBvY2giLCAyMSkgPz8gMCksCiAgICBsYWJlbGVkRXBvY2g6IE51bWJlcihwaWNrKHIsICJsYWJlbGVkX2Vwb2NoIiwgMjIpID8/IDApLAogICAgYW5jZXN0b3JGbGFnU291cmNlOiBOdW1iZXIocGljayhyLCAiYW5jZXN0b3JfZmxhZ19zb3VyY2UiLCAyMykgPz8gMCksCiAgICBjZXJ0aWZpY2F0ZUlkc0NzdjogU3RyaW5nKHBpY2sociwgImNlcnRpZmljYXRlX2lkc19jc3YiLCAyNCkgPz8gIiIpLAogICAgY2VydGlmaWNhdGVDaGVja1N0YXR1czogU3RyaW5nKAogICAgICBwaWNrKHIsICJjZXJ0aWZpY2F0ZV9jaGVja19zdGF0dXMiLCAyNSkgPz8gIk5PVF9DSEVDS0VEIgogICAgKSBhcyBMb3RWaWV3WyJjZXJ0aWZpY2F0ZUNoZWNrU3RhdHVzIl0sCiAgICBjZXJ0aWZpY2F0ZUV2aWRlbmNlOiBTdHJpbmcocGljayhyLCAiY2VydGlmaWNhdGVfZXZpZGVuY2UiLCAyNikgPz8gIiIpLAogICAgY2VydGlmaWNhdGVDaGVja2VkRXBvY2g6IE51bWJlcihwaWNrKHIsICJjZXJ0aWZpY2F0ZV9jaGVja2VkX2Vwb2NoIiwgMjcpID8/IDApLAogIH07Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRMb3RzQnlNYXRlcmlhbChtYXRlcmlhbDogc3RyaW5nKTogUHJvbWlzZTxudW1iZXJbXT4gewogIGNvbnN0IHI6IGFueSA9IGF3YWl0IHJlYWRDbGllbnQoKS5yZWFkQ29udHJhY3QoewogICAgYWRkcmVzczogQ09OVFJBQ1RfQUREUkVTUyBhcyBIZXgsCiAgICBmdW5jdGlvbk5hbWU6ICJnZXRfbG90c19ieV9tYXRlcmlhbCIsCiAgICBhcmdzOiBbbWF0ZXJpYWxdLAogIH0pOwogIHJldHVybiBudW1BcnIocik7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRMb3RzQnlSZWdpb24ocmVnaW9uOiBzdHJpbmcpOiBQcm9taXNlPG51bWJlcltdPiB7CiAgY29uc3QgcjogYW55ID0gYXdhaXQgcmVhZENsaWVudCgpLnJlYWRDb250cmFjdCh7CiAgICBhZGRyZXNzOiBDT05UUkFDVF9BRERSRVNTIGFzIEhleCwKICAgIGZ1bmN0aW9uTmFtZTogImdldF9sb3RzX2J5X3JlZ2lvbiIsCiAgICBhcmdzOiBbcmVnaW9uXSwKICB9KTsKICByZXR1cm4gbnVtQXJyKHIpOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0TWF0ZXJpYWxSZWdpb25EZW5zaXR5KG1hdGVyaWFsOiBzdHJpbmcsIHJlZ2lvbjogc3RyaW5nKTogUHJvbWlzZTxudW1iZXI+IHsKICBjb25zdCByOiBhbnkgPSBhd2FpdCByZWFkQ2xpZW50KCkucmVhZENvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiZ2V0X21hdGVyaWFsX3JlZ2lvbl9kZW5zaXR5IiwKICAgIGFyZ3M6IFttYXRlcmlhbCwgcmVnaW9uXSwKICB9KTsKICByZXR1cm4gTnVtYmVyKHIpIHx8IDA7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRBbmNlc3RvcnMobG90SWQ6IG51bWJlcik6IFByb21pc2U8bnVtYmVyW10+IHsKICBjb25zdCByOiBhbnkgPSBhd2FpdCByZWFkQ2xpZW50KCkucmVhZENvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiZ2V0X2FuY2VzdG9ycyIsCiAgICBhcmdzOiBbbG90SWRdLAogIH0pOwogIHJldHVybiBudW1BcnIocik7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXREZXNjZW5kYW50cyhsb3RJZDogbnVtYmVyKTogUHJvbWlzZTxudW1iZXJbXT4gewogIGNvbnN0IHI6IGFueSA9IGF3YWl0IHJlYWRDbGllbnQoKS5yZWFkQ29udHJhY3QoewogICAgYWRkcmVzczogQ09OVFJBQ1RfQUREUkVTUyBhcyBIZXgsCiAgICBmdW5jdGlvbk5hbWU6ICJnZXRfZGVzY2VuZGFudHMiLAogICAgYXJnczogW2xvdElkXSwKICB9KTsKICByZXR1cm4gbnVtQXJyKHIpOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gbGlzdExvdHMoKTogUHJvbWlzZTxudW1iZXJbXT4gewogIGNvbnN0IHI6IGFueSA9IGF3YWl0IHJlYWRDbGllbnQoKS5yZWFkQ29udHJhY3QoewogICAgYWRkcmVzczogQ09OVFJBQ1RfQUREUkVTUyBhcyBIZXgsCiAgICBmdW5jdGlvbk5hbWU6ICJsaXN0X2xvdHMiLAogICAgYXJnczogW10sCiAgfSk7CiAgcmV0dXJuIG51bUFycihyKTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFBvb2xCYWxhbmNlKCk6IFByb21pc2U8c3RyaW5nPiB7CiAgY29uc3QgcjogYW55ID0gYXdhaXQgcmVhZENsaWVudCgpLnJlYWRDb250cmFjdCh7CiAgICBhZGRyZXNzOiBDT05UUkFDVF9BRERSRVNTIGFzIEhleCwKICAgIGZ1bmN0aW9uTmFtZTogImdldF9wb29sX2JhbGFuY2UiLAogICAgYXJnczogW10sCiAgfSk7CiAgcmV0dXJuIFN0cmluZyhyID8/ICIwIik7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRDb3VudHMoKTogUHJvbWlzZTxDb3VudHM+IHsKICBjb25zdCByOiBhbnkgPSBhd2FpdCByZWFkQ2xpZW50KCkucmVhZENvbnRyYWN0KHsKICAgIGFkZHJlc3M6IENPTlRSQUNUX0FERFJFU1MgYXMgSGV4LAogICAgZnVuY3Rpb25OYW1lOiAiZ2V0X2NvdW50cyIsCiAgICBhcmdzOiBbXSwKICB9KTsKICBjb25zdCBwID0gU3RyaW5nKHIpLnNwbGl0KCJ8fCIpLm1hcCgoeCkgPT4gTnVtYmVyKHgpIHx8IDApOwogIHJldHVybiB7CiAgICBuZXh0OiBwWzBdIHx8IDAsCiAgICBhdWRpdGVkOiBwWzFdIHx8IDAsCiAgICB2ZXJpZmllZDogcFsyXSB8fCAwLAogICAgcmVqZWN0ZWQ6IHBbM10gfHwgMCwKICAgIGNhc2NhZGVGbGFnZ2VkOiBwWzRdIHx8IDAsCiAgICB0b3RhbExhYmVsczogcFs1XSB8fCAwLAogICAgZXBvY2g6IHBbNl0gfHwgMCwKICB9Owp9CgovLyDilIDilIAgQWdncmVnYXRlIGxvYWRlcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSALQpleHBvcnQgYXN5bmMgZnVuY3Rpb24gbGlzdEFsbChtYXhSb3dzID0gMjAwKTogUHJvbWlzZTxMb3RSb3dbXT4gewogIGNvbnN0IGlkcyA9IGF3YWl0IGxpc3RMb3RzKCk7CiAgaWYgKGlkcy5sZW5ndGggPT09IDApIHJldHVybiBbXTsKICBjb25zdCBzbGljZSA9IGlkcy5zbGljZSgtbWF4Um93cyk7CiAgY29uc3Qgcm93cyA9IGF3YWl0IFByb21pc2UuYWxsKAogICAgc2xpY2UubWFwKGFzeW5jIChpZCkgPT4gewogICAgICB0cnkgewogICAgICAgIGNvbnN0IGMgPSBhd2FpdCBnZXRMb3QoaWQpOwogICAgICAgIHJldHVybiB7IGlkLCAuLi5jIH07CiAgICAgIH0gY2F0Y2ggewogICAgICAgIHJldHVybiBudWxsOwogICAgICB9CiAgICB9KQogICk7CiAgcmV0dXJuIHJvd3MuZmlsdGVyKChyKTogciBpcyBMb3RSb3cgPT4gciAhPT0gbnVsbCk7Cn0KCi8vIOKUgOKUgCBMb2NhbCBtYXNzLWJhbGFuY2UgcHJldmlldyAobWlycm9ycyB2ZXJpZnlfbWFzc19iYWxhbmNlKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKLy8gUnVucyB0aGUgZGV0ZXJtaW5pc3RpYyBtYXRoIGNsaWVudC1zaWRlIEJFRk9SRSB0aGUgdXNlciBzaWducyB0aGUgdHguCmV4cG9ydCBmdW5jdGlvbiBwcmV2aWV3TWFzc0JhbGFuY2UobG90OiBMb3RWaWV3LCBieUlkOiBNYXA8bnVtYmVyLCBMb3RWaWV3Pik6IE1hc3NCYWxhbmNlUmVzdWx0IHsKICBjb25zdCBjbGFpbWVkID0gbG90LmNsYWltZWRSZWN5Y2xlZE1hc3NLZzsKICBsZXQgY2FwYWNpdHkgPSAwOwogIGNvbnN0IHBhcmVudHM6IE1hc3NCYWxhbmNlUmVzdWx0WyJwYXJlbnRzIl0gPSBbXTsKCiAgaWYgKGxvdC5wYXJlbnRMb3RJZHMubGVuZ3RoID09PSAwKSB7CiAgICBjYXBhY2l0eSA9IGxvdC5sb3RNYXNzS2c7CiAgfSBlbHNlIHsKICAgIGZvciAoY29uc3QgcGlkIG9mIGxvdC5wYXJlbnRMb3RJZHMpIHsKICAgICAgY29uc3QgcCA9IGJ5SWQuZ2V0KHBpZCk7CiAgICAgIGNvbnN0IHBTdGF0dXMgPSBwID8gcC5zdGF0dXMgOiAtMTsKICAgICAgbGV0IGNvbnRyaWJ1dGVkID0gMDsKICAgICAgaWYgKHApIHsKICAgICAgICBpZiAocFN0YXR1cyA9PT0gU1RfUkVKRUNURUQgfHwgcFN0YXR1cyA9PT0gU1RfRkxBR0dFRCkgewogICAgICAgICAgLy8gY29udHJhY3QgZXJyb3JzIG91dCDigJQgcmVwcmVzZW50IGFzIHplcm8gKyBmYWlsIGZsYWcgZG93bnN0cmVhbS4KICAgICAgICAgIGNvbnRyaWJ1dGVkID0gMDsKICAgICAgICB9IGVsc2UgaWYgKAogICAgICAgICAgcFN0YXR1cyA9PT0gU1RfTEFCRUxFRCB8fAogICAgICAgICAgcFN0YXR1cyA9PT0gU1RfQVVESVRFRF9UMiB8fAogICAgICAgICAgcFN0YXR1cyA9PT0gU1RfQVVESVRFRF9UMQogICAgICAgICkgewogICAgICAgICAgY29udHJpYnV0ZWQgPSBNYXRoLmZsb29yKChwLmxvdE1hc3NLZyAqIHAudmVyaWZpZWRSZWN5Y2xlZFBjdCkgLyAxMDApOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICBjb250cmlidXRlZCA9IHAuY2xhaW1lZFJlY3ljbGVkTWFzc0tnOwogICAgICAgIH0KICAgICAgfQogICAgICBjYXBhY2l0eSArPSBjb250cmlidXRlZDsKICAgICAgcGFyZW50cy5wdXNoKHsgcGFyZW50SWQ6IHBpZCwgY29udHJpYnV0ZWRLZzogY29udHJpYnV0ZWQsIHBhcmVudFN0YXR1czogcFN0YXR1cyB9KTsKICAgIH0KICB9CgogIGNvbnN0IGJsb2NrZWQgPSBwYXJlbnRzLnNvbWUoCiAgICAocCkgPT4gcC5wYXJlbnRTdGF0dXMgPT09IFNUX1JFSkVDVEVEIHx8IHAucGFyZW50U3RhdHVzID09PSBTVF9GTEFHR0VECiAgKTsKICBjb25zdCBvayA9ICFibG9ja2VkICYmIGNsYWltZWQgPD0gY2FwYWNpdHkgKyBNQVNTX0JBTEFOQ0VfVE9MRVJBTkNFX0tHOwogIHJldHVybiB7CiAgICBsb3RJZDogbG90LmxvdElkLAogICAgbWFzc0JhbGFuY2VPazogb2ssCiAgICBjbGFpbWVkUmVjeWNsZWRLZzogY2xhaW1lZCwKICAgIHBhcmVudENhcGFjaXR5S2c6IGNhcGFjaXR5LAogICAgcGFyZW50cywKICB9Owp9Cg==
+import { createClient, createAccount } from "genlayer-js";
+import { studionet } from "genlayer-js/chains";
+import { TransactionStatus } from "genlayer-js/types";
+import type { WalletClient } from "viem";
+import { CONTRACT_ADDRESS } from "./chain";
+
+type Hex = `0x${string}`;
+type ConnectedWallet = WalletClient & {
+  account: { address: Hex };
+  transport: {
+    request: (args: { method: string; params?: unknown[] }) => Promise<unknown>;
+  };
+};
+const TIMEOUT_MS = 240_000;
+
+// ── Domain vocabulary ─────────────────────────────────────────────────────--
+export type Ruling =
+  | "VERIFIED"
+  | "PARTIAL"
+  | "GREENWASH"
+  | "MASS_BALANCE_FAIL"
+  | "DEPENDENCY_FLAGGED"
+  | "";
+
+// status: 0 REGISTERED, 1 TRACED, 2 BALANCE_OK, 3 AUDITED_T1,
+//         4 AUDITED_T2, 5 LABELED, 6 REJECTED, 7 FLAGGED
+export const STATUS_LABEL = [
+  "REGISTERED",
+  "TRACED",
+  "BALANCE_OK",
+  "AUDITED_T1",
+  "AUDITED_T2",
+  "LABELED",
+  "REJECTED",
+  "FLAGGED",
+] as const;
+
+export const ST_REGISTERED = 0;
+export const ST_TRACED = 1;
+export const ST_BALANCE_OK = 2;
+export const ST_AUDITED_T1 = 3;
+export const ST_AUDITED_T2 = 4;
+export const ST_LABELED = 5;
+export const ST_REJECTED = 6;
+export const ST_FLAGGED = 7;
+
+export const HIGH_VALUE_LOT_KG = 5000;
+export const MASS_BALANCE_TOLERANCE_KG = 5;
+export const MAX_PARENT_LOTS = 8;
+
+// ── Domain types ──────────────────────────────────────────────────────────--
+export interface LotView {
+  lotId: number;
+  claimant: string;
+  publicLabel: string;
+  material: string;
+  region: string;
+  lotMassKg: number;
+  claimedRecycledMassKg: number;
+  parentLotIds: number[];
+  childLotIds: number[];
+  trace: string;
+  evidenceUrls: string;
+  evidenceDigest: string;
+  evidenceVerified: boolean;
+  evidenceSourcesConfirmed: number;
+  verificationSummary: string;
+  bondWei: string;
+  status: number;
+  ruling: Ruling;
+  verifiedRecycledPct: number;
+  recycledPctT1: number;
+  recycledPctT2: number;
+  massBalanceOk: boolean;
+  labelIssued: boolean;
+  rationale: string;
+  sybilDensity: number;
+  registeredEpoch: number;
+  auditedEpoch: number;
+  labeledEpoch: number;
+  ancestorFlagSource: number;
+}
+export interface LotRow extends LotView {
+  id: number;
+}
+
+export interface Counts {
+  next: number;
+  audited: number;
+  verified: number;
+  rejected: number;
+  cascadeFlagged: number;
+  totalLabels: number;
+  epoch: number;
+}
+
+export interface MassBalanceResult {
+  lotId: number;
+  massBalanceOk: boolean;
+  claimedRecycledKg: number;
+  parentCapacityKg: number;
+  parents: { parentId: number; contributedKg: number; parentStatus: number }[];
+}
+
+// ── Clients ─────────────────────────────────────────────────────────────---
+function readClient() {
+  return createClient({ chain: studionet, account: createAccount() });
+}
+function requireConnectedWallet(wallet: WalletClient | undefined): ConnectedWallet {
+  if (!wallet?.account?.address) {
+    throw new Error("Connect a wallet before sending a transaction.");
+  }
+  if (typeof wallet.transport?.request !== "function") {
+    throw new Error("Connected wallet does not expose an EIP-1193 request signer.");
+  }
+  return wallet as ConnectedWallet;
+}
+function writeClient(wallet: WalletClient | undefined) {
+  const signer = requireConnectedWallet(wallet);
+  return createClient({
+    chain: studionet,
+    account: signer.account.address,
+    provider: {
+      request: (args: { method: string; params?: unknown[] }) =>
+        signer.transport.request(args),
+    },
+  });
+}
+
+async function waitAccepted(client: any, hash: Hex) {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new Error("Transaction timed out")), TIMEOUT_MS);
+  });
+  try {
+    await Promise.race([
+      client.waitForTransactionReceipt({
+        hash: hash as never,
+        status: TransactionStatus.ACCEPTED,
+        interval: 5000,
+        retries: 64,
+      }),
+      timeout,
+    ]);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+}
+
+// ── Defensive parsing ───────────────────────────────────────────────────---
+function pick(obj: any, key: string, idx: number): any {
+  if (obj == null) return undefined;
+  if (Array.isArray(obj)) return obj[idx];
+  if (typeof obj === "object" && key in obj) return obj[key];
+  return undefined;
+}
+function numArr(v: any): number[] {
+  if (!Array.isArray(v)) return [];
+  return v.map((x) => Number(x) || 0);
+}
+
+// ── Bond estimation (mirrors the contract's density formula) ────────────────
+// required = MIN_BOND_WEI * (DENSITY_DENOM + density * DENSITY_NUMER) / DENSITY_DENOM
+export const MIN_BOND_WEI = 5_000_000_000_000_000n; // 0.005 GEN
+const DENSITY_NUMER = 15n;
+const DENSITY_DENOM = 10n;
+export function requiredBondWei(density: number): bigint {
+  const d = BigInt(Math.max(0, Math.floor(density)));
+  return (MIN_BOND_WEI * (DENSITY_DENOM + d * DENSITY_NUMER)) / DENSITY_DENOM;
+}
+export function weiToGen(wei: bigint): string {
+  // 18 decimals, render up to 6 fractional digits.
+  const whole = wei / 1_000_000_000_000_000_000n;
+  const frac = wei % 1_000_000_000_000_000_000n;
+  const fracStr = frac.toString().padStart(18, "0").slice(0, 6).replace(/0+$/, "");
+  return fracStr ? `${whole}.${fracStr}` : `${whole}`;
+}
+
+// ── Writes ──────────────────────────────────────────────────────────────---
+export async function registerLot(
+  wallet: WalletClient | undefined,
+  f: {
+    publicLabel: string;
+    material: string;
+    region: string;
+    lotMassKg: number;
+    claimedRecycledMassKg: number;
+    parentLotIdsCsv: string;
+    bondWei: bigint;
+  }
+): Promise<number> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "register_lot",
+    args: [
+      f.publicLabel.trim(),
+      f.material.trim(),
+      f.region.trim(),
+      Math.floor(f.lotMassKg),
+      Math.floor(f.claimedRecycledMassKg),
+      f.parentLotIdsCsv.trim(),
+    ],
+    value: f.bondWei,
+  })) as Hex;
+  await waitAccepted(wc, h);
+  const c = await getCounts();
+  return c.next - 1;
+}
+
+export async function submitTrace(
+  wallet: WalletClient | undefined,
+  lotId: number,
+  trace: string,
+  evidenceUrls: string
+): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "submit_trace",
+    args: [lotId, trace.trim(), evidenceUrls.trim()],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function verifyMassBalance(wallet: WalletClient | undefined, lotId: number): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "verify_mass_balance",
+    args: [lotId],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function adjudicate(wallet: WalletClient | undefined, lotId: number): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "adjudicate",
+    args: [lotId],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function adjudicateDeep(wallet: WalletClient | undefined, lotId: number): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "adjudicate_deep",
+    args: [lotId],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function issueLabel(wallet: WalletClient | undefined, lotId: number): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "issue_label",
+    args: [lotId],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function cascadeFlagDescendants(wallet: WalletClient | undefined, ancestorLotId: number): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "cascade_flag_descendants",
+    args: [ancestorLotId],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function advanceEpoch(wallet: WalletClient | undefined): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "advance_epoch",
+    args: [],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+export async function setAdmin(wallet: WalletClient | undefined, newAdmin: string): Promise<void> {
+  const wc = writeClient(wallet);
+  const h = (await wc.writeContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "set_admin",
+    args: [newAdmin.trim()],
+    value: 0n,
+  })) as Hex;
+  await waitAccepted(wc, h);
+}
+
+// ── Views ───────────────────────────────────────────────────────────────---
+export async function getLot(lotId: number): Promise<LotView> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_lot",
+    args: [lotId],
+  });
+  return {
+    lotId: Number(pick(r, "lot_id", 0) ?? lotId),
+    claimant: String(pick(r, "claimant", 1) ?? ""),
+    publicLabel: String(pick(r, "public_label", 2) ?? ""),
+    material: String(pick(r, "material", 3) ?? ""),
+    region: String(pick(r, "region", 4) ?? ""),
+    lotMassKg: Number(pick(r, "lot_mass_kg", 5) ?? 0),
+    claimedRecycledMassKg: Number(pick(r, "claimed_recycled_mass_kg", 6) ?? 0),
+    parentLotIds: numArr(pick(r, "parent_lot_ids", 7)),
+    childLotIds: numArr(pick(r, "child_lot_ids", 8)),
+    trace: String(pick(r, "trace", 9) ?? ""),
+    evidenceUrls: String(pick(r, "evidence_urls", 10) ?? ""),
+    evidenceDigest: String(pick(r, "evidence_digest", 11) ?? ""),
+    evidenceVerified: Boolean(pick(r, "evidence_verified", 12) ?? false),
+    evidenceSourcesConfirmed: Number(pick(r, "evidence_sources_confirmed", 13) ?? 0),
+    verificationSummary: String(pick(r, "verification_summary", 14) ?? ""),
+    bondWei: String(pick(r, "bond_wei", 15) ?? "0"),
+    status: Number(pick(r, "status", 16) ?? 0),
+    ruling: String(pick(r, "ruling", 17) ?? "") as Ruling,
+    verifiedRecycledPct: Number(pick(r, "verified_recycled_pct", 18) ?? 0),
+    recycledPctT1: Number(pick(r, "recycled_pct_t1", 19) ?? 0),
+    recycledPctT2: Number(pick(r, "recycled_pct_t2", 20) ?? 0),
+    massBalanceOk: Boolean(pick(r, "mass_balance_ok", 21) ?? false),
+    labelIssued: Boolean(pick(r, "label_issued", 22) ?? false),
+    rationale: String(pick(r, "rationale", 23) ?? ""),
+    sybilDensity: Number(pick(r, "sybil_density", 24) ?? 0),
+    registeredEpoch: Number(pick(r, "registered_epoch", 25) ?? 0),
+    auditedEpoch: Number(pick(r, "audited_epoch", 26) ?? 0),
+    labeledEpoch: Number(pick(r, "labeled_epoch", 27) ?? 0),
+    ancestorFlagSource: Number(pick(r, "ancestor_flag_source", 28) ?? 0),
+  };
+}
+
+export async function getLotsByMaterial(material: string): Promise<number[]> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_lots_by_material",
+    args: [material],
+  });
+  return numArr(r);
+}
+
+export async function getLotsByRegion(region: string): Promise<number[]> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_lots_by_region",
+    args: [region],
+  });
+  return numArr(r);
+}
+
+export async function getMaterialRegionDensity(material: string, region: string): Promise<number> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_material_region_density",
+    args: [material, region],
+  });
+  return Number(r) || 0;
+}
+
+export async function getAncestors(lotId: number): Promise<number[]> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_ancestors",
+    args: [lotId],
+  });
+  return numArr(r);
+}
+
+export async function getDescendants(lotId: number): Promise<number[]> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_descendants",
+    args: [lotId],
+  });
+  return numArr(r);
+}
+
+export async function listLots(): Promise<number[]> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "list_lots",
+    args: [],
+  });
+  return numArr(r);
+}
+
+export async function getPoolBalance(): Promise<string> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_pool_balance",
+    args: [],
+  });
+  return String(r ?? "0");
+}
+
+export async function getCounts(): Promise<Counts> {
+  const r: any = await readClient().readContract({
+    address: CONTRACT_ADDRESS as Hex,
+    functionName: "get_counts",
+    args: [],
+  });
+  const p = String(r).split("||").map((x) => Number(x) || 0);
+  return {
+    next: p[0] || 0,
+    audited: p[1] || 0,
+    verified: p[2] || 0,
+    rejected: p[3] || 0,
+    cascadeFlagged: p[4] || 0,
+    totalLabels: p[5] || 0,
+    epoch: p[6] || 0,
+  };
+}
+
+// ── Aggregate loaders ─────────────────────────────────────────────────────-
+export async function listAll(maxRows = 200): Promise<LotRow[]> {
+  const ids = await listLots();
+  if (ids.length === 0) return [];
+  const slice = ids.slice(-maxRows);
+  const rows = await Promise.all(
+    slice.map(async (id) => {
+      try {
+        const c = await getLot(id);
+        return { id, ...c };
+      } catch {
+        return null;
+      }
+    })
+  );
+  return rows.filter((r): r is LotRow => r !== null);
+}
+
+// ── Local mass-balance preview (mirrors verify_mass_balance) ────────────────
+// Runs the deterministic math client-side BEFORE the user signs the tx.
+export function previewMassBalance(lot: LotView, byId: Map<number, LotView>): MassBalanceResult {
+  const claimed = lot.claimedRecycledMassKg;
+  let capacity = 0;
+  const parents: MassBalanceResult["parents"] = [];
+
+  if (lot.parentLotIds.length === 0) {
+    capacity = lot.lotMassKg;
+  } else {
+    for (const pid of lot.parentLotIds) {
+      const p = byId.get(pid);
+      const pStatus = p ? p.status : -1;
+      let contributed = 0;
+      if (p) {
+        if (pStatus === ST_REJECTED || pStatus === ST_FLAGGED) {
+          // contract errors out — represent as zero + fail flag downstream.
+          contributed = 0;
+        } else if (
+          pStatus === ST_LABELED ||
+          pStatus === ST_AUDITED_T2 ||
+          pStatus === ST_AUDITED_T1
+        ) {
+          contributed = Math.floor((p.lotMassKg * p.verifiedRecycledPct) / 100);
+        } else {
+          contributed = p.claimedRecycledMassKg;
+        }
+      }
+      capacity += contributed;
+      parents.push({ parentId: pid, contributedKg: contributed, parentStatus: pStatus });
+    }
+  }
+
+  const blocked = parents.some(
+    (p) => p.parentStatus === ST_REJECTED || p.parentStatus === ST_FLAGGED
+  );
+  const ok = !blocked && claimed <= capacity + MASS_BALANCE_TOLERANCE_KG;
+  return {
+    lotId: lot.lotId,
+    massBalanceOk: ok,
+    claimedRecycledKg: claimed,
+    parentCapacityKg: capacity,
+    parents,
+  };
+}

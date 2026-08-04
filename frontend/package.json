@@ -1,1 +1,31 @@
-ew0KICAgICJuYW1lIjogICJyZWN5Y2xlZC12ZXJpZnkiLA0KICAgICJwcml2YXRlIjogIHRydWUsDQogICAgInZlcnNpb24iOiAgIjEuMC4wIiwNCiAgICAidHlwZSI6ICAibW9kdWxlIiwNCiAgICAic2NyaXB0cyI6ICB7DQogICAgICAgICAgICAgICAgICAgICJkZXYiOiAgInZpdGUiLA0KICAgICAgICAgICAgICAgICAgICAiYnVpbGQiOiAgInRzYyAtYiBcdTAwMjZcdTAwMjYgdml0ZSBidWlsZCIsDQogICAgICAgICAgICAgICAgICAgICJwcmV2aWV3IjogICJ2aXRlIHByZXZpZXciDQogICAgICAgICAgICAgICAgfSwNCiAgICAiZGVwZW5kZW5jaWVzIjogIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAiQHJhaW5ib3ctbWUvcmFpbmJvd2tpdCI6ICAiXjIuMS43IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAiQHRhbnN0YWNrL3F1ZXJ5LWNvcmUiOiAgIl41LjU5LjAiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOiAgIl41LjU5LjAiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICJnZW5sYXllci1qcyI6ICAiXjEuMS44IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAiQHBob3NwaG9yLWljb25zL3JlYWN0IjogICJeMi4xLjciLA0KICAgICAgICAgICAgICAgICAgICAgICAgICJyZWFjdCI6ICAiXjE4LjMuMSIsDQogICAgICAgICAgICAgICAgICAgICAgICAgInJlYWN0LWRvbSI6ICAiXjE4LjMuMSIsDQogICAgICAgICAgICAgICAgICAgICAgICAgInZpZW0iOiAgIl4yLjIxLjE5IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAid2FnbWkiOiAgIl4yLjEyLjE3IiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAiZDMiOiAgIl43LjkuMCINCiAgICAgICAgICAgICAgICAgICAgIH0sDQogICAgImRldkRlcGVuZGVuY2llcyI6ICB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgIkB0eXBlcy9yZWFjdCI6ICAiXjE4LjMuMTEiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICJAdHlwZXMvcmVhY3QtZG9tIjogICJeMTguMy4wIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiQHR5cGVzL2QzIjogICJeNy40LjMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICJAdml0ZWpzL3BsdWdpbi1yZWFjdCI6ICAiXjQuMy4yIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAidHlwZXNjcmlwdCI6ICAiXjUuNi4yIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAidml0ZSI6ICAiXjUuNC44Ig0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KfQ0K
+{
+    "name":  "recycled-verify",
+    "private":  true,
+    "version":  "1.0.0",
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "tsc -b \u0026\u0026 vite build",
+                    "preview":  "vite preview"
+                },
+    "dependencies":  {
+                         "@rainbow-me/rainbowkit":  "^2.1.7",
+                         "@tanstack/query-core":  "^5.59.0",
+                         "@tanstack/react-query":  "^5.59.0",
+                         "genlayer-js":  "^1.1.8",
+                         "@phosphor-icons/react":  "^2.1.7",
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1",
+                         "viem":  "^2.21.19",
+                         "wagmi":  "^2.12.17",
+                         "d3":  "^7.9.0"
+                     },
+    "devDependencies":  {
+                            "@types/react":  "^18.3.11",
+                            "@types/react-dom":  "^18.3.0",
+                            "@types/d3":  "^7.4.3",
+                            "@vitejs/plugin-react":  "^4.3.2",
+                            "typescript":  "^5.6.2",
+                            "vite":  "^5.4.8"
+                        }
+}

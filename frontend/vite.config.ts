@@ -1,1 +1,37 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAidml0ZSI7CmltcG9ydCByZWFjdCBmcm9tICJAdml0ZWpzL3BsdWdpbi1yZWFjdCI7CgovLyBQZWVsIHRoZSBsYXJnZSAqc3RhdGljKiBsaWJyYXJpZXMgaW50byB0aGVpciBvd24gY2h1bmtzIHNvIHRoZSBlbnRyeSBidW5kbGUKLy8gc3RheXMgdW5kZXIgVml0ZSdzIDUwMCBrQiB3YXJuaW5nIHRocmVzaG9sZC4gUmFpbmJvd0tpdCAvIFdhbGxldENvbm5lY3QgLwovLyBSZW93biBrZWVwIHRoZWlyIGJ1aWx0LWluIHBlci13YWxsZXQsIHBlci1sb2NhbGUgZHluYW1pYyBzcGxpdHRpbmcsIHNvIHRoZXkKLy8gYXJlIGRlbGliZXJhdGVseSBsZWZ0IHVuZ3JvdXBlZC4gd2FnbWkgc2hhcmVzIHRoZSBjcnlwdG8gY2h1bmsgd2l0aCB2aWVtIHNvCi8vIHRoZSB0d28gdGlnaHRseS1jb3VwbGVkIGxpYnJhcmllcyBkbyBub3QgZm9ybSBhIGNpcmN1bGFyIGNodW5rLgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoewogIGJhc2U6ICIuLyIsCiAgcGx1Z2luczogW3JlYWN0KCldLAogIGJ1aWxkOiB7CiAgICByb2xsdXBPcHRpb25zOiB7CiAgICAgIG91dHB1dDogewogICAgICAgIG1hbnVhbENodW5rcyhpZCkgewogICAgICAgICAgaWYgKCFpZC5pbmNsdWRlcygibm9kZV9tb2R1bGVzIikpIHJldHVybjsKICAgICAgICAgIGlmIChpZC5pbmNsdWRlcygiL3JlYWN0LWRvbS8iKSB8fCBpZC5pbmNsdWRlcygiL3NjaGVkdWxlci8iKSkgcmV0dXJuICJyZWFjdC1kb20iOwogICAgICAgICAgaWYgKGlkLmluY2x1ZGVzKCIvcmVhY3QvIikpIHJldHVybiAicmVhY3QiOwogICAgICAgICAgaWYgKGlkLmluY2x1ZGVzKCIvZ2VubGF5ZXItanMvIikpIHJldHVybiAiZ2VubGF5ZXIiOwogICAgICAgICAgaWYgKAogICAgICAgICAgICBpZC5pbmNsdWRlcygiL3ZpZW0vIikgfHwKICAgICAgICAgICAgaWQuaW5jbHVkZXMoIi9hYml0eXBlLyIpIHx8CiAgICAgICAgICAgIGlkLmluY2x1ZGVzKCIvb3gvIikgfHwKICAgICAgICAgICAgaWQuaW5jbHVkZXMoIi9Abm9ibGUvIikgfHwKICAgICAgICAgICAgaWQuaW5jbHVkZXMoIi9Ac2N1cmUvIikgfHwKICAgICAgICAgICAgaWQuaW5jbHVkZXMoIi9AYWRyYWZmeS8iKSB8fAogICAgICAgICAgICBpZC5pbmNsdWRlcygiL3dhZ21pLyIpIHx8CiAgICAgICAgICAgIGlkLmluY2x1ZGVzKCIvQHdhZ21pLyIpCiAgICAgICAgICApIHsKICAgICAgICAgICAgcmV0dXJuICJjcnlwdG8iOwogICAgICAgICAgfQogICAgICAgICAgaWYgKGlkLmluY2x1ZGVzKCIvQHRhbnN0YWNrLyIpKSByZXR1cm4gInRhbnN0YWNrIjsKICAgICAgICB9LAogICAgICB9LAogICAgfSwKICB9LAp9KTsK
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// Peel the large *static* libraries into their own chunks so the entry bundle
+// stays under Vite's 500 kB warning threshold. RainbowKit / WalletConnect /
+// Reown keep their built-in per-wallet, per-locale dynamic splitting, so they
+// are deliberately left ungrouped. wagmi shares the crypto chunk with viem so
+// the two tightly-coupled libraries do not form a circular chunk.
+export default defineConfig({
+  base: "./",
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("/react-dom/") || id.includes("/scheduler/")) return "react-dom";
+          if (id.includes("/react/")) return "react";
+          if (id.includes("/genlayer-js/")) return "genlayer";
+          if (
+            id.includes("/viem/") ||
+            id.includes("/abitype/") ||
+            id.includes("/ox/") ||
+            id.includes("/@noble/") ||
+            id.includes("/@scure/") ||
+            id.includes("/@adraffy/") ||
+            id.includes("/wagmi/") ||
+            id.includes("/@wagmi/")
+          ) {
+            return "crypto";
+          }
+          if (id.includes("/@tanstack/")) return "tanstack";
+        },
+      },
+    },
+  },
+});

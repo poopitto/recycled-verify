@@ -1,1 +1,7 @@
-bm9kZV9tb2R1bGVzCmRpc3QKLnZpdGVfY2FjaGUKKi5sb2NhbAouRFNfU3RvcmUKKi50c2J1aWxkaW5mbw0KLnZlcmNlbA0K
+node_modules
+dist
+.vite_cache
+*.local
+.DS_Store
+*.tsbuildinfo
+.vercel
